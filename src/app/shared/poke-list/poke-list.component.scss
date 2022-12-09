@@ -1,0 +1,153 @@
+@import '../../../config-scss/rem-calc.scss';
+
+:host{
+  display: flex;
+  flex-wrap: wrap;
+  @media  screen and (max-width: 640px){
+    display: grid;
+
+    .pokemon {
+      display: grid;
+      grid-gap:30px;
+      padding: 5px;
+      grid-template-rows: repeat(auto-fit, minmax(35%, 2fr));
+      background: #FCDDEC;
+      width: 200%;
+      border: 1px solid;
+      margin-top: 10px;
+
+    }
+    .card-img{
+
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      height: 270px;
+      width: 270px;
+    }
+  }
+  .pokemon {
+      display: grid;
+      grid-gap:30px;
+      padding: 5px;
+      grid-template-columns: repeat(auto-fit, minmax(35%, 2fr));
+      background: #FCDDEC;
+      width: 200%;
+      border: 1px solid;
+      margin-top: 10px;
+
+  }
+
+  .pokemon{
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .card-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 270px;
+    width: 270px;
+  }
+
+  .card-img img{
+    width: 90%;
+    height:90%;
+  }
+
+  .card-info{
+    padding: 20px;
+  }
+
+  .card-info h1{
+    color: #000;
+    font-size: 40px;
+  }
+  .pokemon-id{
+    display: block;
+    color: rgb(126, 50, 50);
+    margin-bottom: 15px;
+  }
+
+  .card-types{
+    display:flex;
+    gap: 10px;
+    margin-top: 15px;
+
+
+  }
+
+  .card-types span{
+    font-size: 20px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+
+  .grass{
+    background-color: var(--color-grass);
+  }
+
+  .poison{
+    background-color: var(--color-poison);
+  }
+  .fire{
+    background-color: var(--color-fire);
+  }
+  .steel{
+    background-color: var(--color-steel);
+  }
+  .dragon{
+    background-color: var(--color-dragon);
+  }
+  .fairy{
+    background-color: var(--color-fairy);
+  }
+  .ghost{
+    background-color: var(--color-ghost);
+  }
+  .ground{
+    background-color: var(--color-ground);
+  }
+  .normal{
+    background-color: var(--color-normal);
+  }
+
+  .rock{
+    background-color: var(--color-rock);
+  }
+  .water{
+    background-color: var(--color-water);
+  }
+  .dark{
+    background-color: var(--color-dark);
+  }
+  .electric{
+    background: var(--color-electric);
+  }
+
+  .fighting{
+    background-color: var(--color-fighting);
+  }
+  .flying{
+    background: var(--color-flying);
+  }
+  .ice{
+    background: var(--color-ice);
+  }
+  .bug{
+    background: var(--color-bug);
+  }
+  .psychic{
+    background: var(--color-psychic);
+  }
+
+
+
+
+}
+

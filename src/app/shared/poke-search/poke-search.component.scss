@@ -1,0 +1,30 @@
+@import '../../../config-scss/rem-calc.scss';
+:host{
+  .form-group{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+    border: 1px solid #555;
+    padding: 15px 10px;
+    border-radius: 25px;
+    width: 90%;
+    padding-left: 20px;
+  }
+   input{
+    font-family: inherit;
+    width: 300px;
+    border:0 none;
+    outline: none;
+    font-size: rem-calc(25);
+
+  }
+  .icon-search{
+    width: 20px;
+    height: 20px;
+    stroke: #555;
+  }
+  &::placeholder{
+    color: #fff;
+  }
+}

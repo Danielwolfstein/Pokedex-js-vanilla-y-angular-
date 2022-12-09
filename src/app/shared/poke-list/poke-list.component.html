@@ -1,0 +1,24 @@
+<!--search-->
+<poke-search></poke-search>
+<section>
+  <ng-template [ngFor] let-pokemon [ngForOf]="getAllPokemons">
+    <a  class="pokemon" *ngIf="pokemon.status">
+      <div class="card-img">
+        <img
+        src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name}}.gif"
+        alt="Pokemon bulbasaur"
+        />
+    </div>
+    <div class="card-info">
+        <span class="pokemon-id">{{pokemon.status.id}}</span>
+        <h1>{{pokemon.name}}</h1>
+        <div *ngFor="let value of pokemon.status.types" class="card-types" id="card-types" style=>
+          <span class={{value.type.name}}>{{value.type.name}}</span>
+        </div>
+    </div>
+    </a>
+  </ng-template>
+</section>
+
+
+
