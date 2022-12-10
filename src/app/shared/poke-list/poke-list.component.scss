@@ -10,7 +10,7 @@
       display: grid;
       grid-gap:30px;
       padding: 5px;
-      grid-template-rows: repeat(auto-fit, minmax(35%, 2fr));
+      grid-template-columns: repeat(auto-fit, minmax(35%, 2fr));
       background: #FCDDEC;
       width: 200%;
       border: 1px solid;
@@ -26,21 +26,20 @@
       width: 270px;
     }
   }
-  .pokemon {
-      display: grid;
-      grid-gap:30px;
-      padding: 5px;
-      grid-template-columns: repeat(auto-fit, minmax(35%, 2fr));
-      background: #FCDDEC;
-      width: 200%;
-      border: 1px solid;
-      margin-top: 10px;
+  .cardlist-pokemon {
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      width: 100%;
+      margin: 30px;
+      padding: 50px;
 
   }
-
   .pokemon{
     cursor: pointer;
     text-decoration: none;
+    margin: 10px;
+    background: #FCDDEC;
   }
 
   .card-img{
@@ -75,8 +74,6 @@
     display:flex;
     gap: 10px;
     margin-top: 15px;
-
-
   }
 
   .card-types span{

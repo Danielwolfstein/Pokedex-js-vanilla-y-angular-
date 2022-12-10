@@ -17,4 +17,21 @@
 
     text-shadow: 4px 0 0 #080B3A, -4px 0 0 #080B3A, 0 4px 0 #080B3A, 0 -4px 0 #080B3A;
   }
+  .btn-search{
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-family: inherit;
+    padding: 15px 30px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color: var(--color-fighting);
+    color: #ffff;
+    font-size: 20px;
+}
+
+.btn-search:hover{
+    background-color: var(--color-steel);
+}
+
 }
