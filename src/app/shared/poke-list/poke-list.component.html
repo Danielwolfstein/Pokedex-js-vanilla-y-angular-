@@ -2,11 +2,19 @@
 <poke-search (emmitSearch)="getSearch($event)"></poke-search>
 <section class="cardlist-pokemon">
   <ng-template [ngFor] let-pokemon [ngForOf]="getAllPokemons">
-    <a [routerLink]="['details', pokemon.status.id]" class="pokemon" *ngIf="pokemon.status">
-      <div class="card-img">
-        <img
+    <a [routerLink]= "['details', pokemon.status.id]" class="pokemon" *ngIf="pokemon.status">
+      <div class="card-img" >
+        <img *ngIf="pokemon.name.includes('-')==false"
         src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name}}.gif"
-        alt="Pokemon bulbasaur"
+        alt="{{pokemon.name}}"
+        />
+        <img *ngIf="pokemon.name.includes('nidoran')"
+        src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name.replace('-', '_')}}.gif"
+        alt="{{pokemon.name}}"
+        />
+        <img *ngIf="pokemon.name.includes('mime')"
+        src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name.replace('-', '.')}}.gif"
+        alt="{{pokemon.name}}"
         />
     </div>
     <div class="card-info">

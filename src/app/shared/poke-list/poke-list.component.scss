@@ -5,7 +5,13 @@
   flex-wrap: wrap;
   @media  screen and (max-width: 640px){
     display: grid;
-
+    .cardlist-pokemon {
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+      margin: 30px;
+      padding: 50px;
+    }
     .pokemon {
       display: grid;
       grid-gap:30px;
@@ -29,7 +35,6 @@
   .cardlist-pokemon {
       display:grid;
       grid-template-columns: repeat(4, 1fr);
-
       width: 100%;
       margin: 30px;
       padding: 50px;
@@ -40,6 +45,10 @@
     text-decoration: none;
     margin: 10px;
     background: #FCDDEC;
+  }
+  .pokemon:hover{
+    transform: translateY(-15px);
+
   }
 
   .card-img{

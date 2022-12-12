@@ -1,6 +1,64 @@
-<!--header-->
-<poke-header></poke-header>
-  
-<main>
 
-</main>
+<!-- Header -->
+<div class="containerDetails">
+  <header class="container">
+    <a href="/" class="logo"> POKEDEX </a>
+  </header>
+
+
+  <main class="container main-pokemon">
+    <ng-template [ngIf]="isloading">
+      <section class="header-main-pokemon">
+        <span class="number-pokemon">#{{pokemon[0].id}}</span>
+        <div class="container-img-pokemon">
+          <img
+          src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{{pokemon[0].id}}.png"
+          [alt]="pokemon[0].name"
+          class="slideInDown"
+        >
+      </div>
+
+      <section class="container-info-pokemon">
+        <h1 class="slideInLeft">{{pokemon[0].name}}</h1>
+          <div *ngFor="let value of pokemon[0].types" class="card-types">
+            <span class={{value.type.name}}>{{value.type.name}}</span>
+        </div>
+        <div class="info-pokemon">
+          <div class="group-info">
+              <p>Altura</p>
+              <span>{{pokemon[0].height}}m</span>
+          </div>
+          <div class="group-info">
+            <p>Peso</p>
+            <span>{{pokemon[0].weight}}kg</span>
+          </div>
+      </div>
+      </section>
+
+      </section>
+
+      <section class="container-stats">
+        <h1>Estadisticas</h1>
+          <section class="stats">
+            <ol class="stat-group">
+              <li *ngFor="let value of pokemon[0].stats">
+                {{ value.stat.name }}
+                <strong class="counter-stat">
+                  {{ value.base_stat }}
+                </strong>
+              </li >
+            </ol>
+           
+          </section>
+
+
+          <a [routerLink]="['']" class="btn btn__secondary">
+            Volver
+          </a>
+      </section>
+    </ng-template>
+
+  </main>
+
+</div>
+
