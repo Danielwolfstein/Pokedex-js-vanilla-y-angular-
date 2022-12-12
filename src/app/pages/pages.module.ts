@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 //Modulo
 import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
+import { TeamComponent } from './team/team.component';
 
 
 
@@ -15,6 +16,7 @@ import { DetailsComponent } from './details/details.component';
   declarations: [
     HomeComponent,
     DetailsComponent,
+    TeamComponent,
   ],
   imports: [
     CommonModule,

@@ -7,11 +7,15 @@
 html{
   font-family: 'Montserrat';
   background: #F5E299;
+  max-width: 1200px;
+  margin: 0;
+  padding: 0;
 }
 
 main{
   max-width: rem-calc(100);
   margin: 0;
- padding: 0;
-   box-sizing: border-box;
+  padding: 0;
+  box-sizing: border-box;
+
 }

@@ -1,41 +1,13 @@
 @import '../../../config-scss/rem-calc.scss';
 
+
 :host{
-  display: flex;
-  flex-wrap: wrap;
-  @media  screen and (max-width: 640px){
-    display: grid;
-    .cardlist-pokemon {
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      width: 100%;
-      margin: 30px;
-      padding: 50px;
-    }
-    .pokemon {
-      display: grid;
-      grid-gap:30px;
-      padding: 5px;
-      grid-template-columns: repeat(auto-fit, minmax(35%, 2fr));
-      background: #FCDDEC;
-      width: 200%;
-      border: 1px solid;
-      margin-top: 10px;
 
-    }
-    .card-img{
 
-      align-items: center;
-      justify-content: center;
-      border-radius: 5px;
-      height: 270px;
-      width: 270px;
-    }
-  }
   .cardlist-pokemon {
       display:grid;
       grid-template-columns: repeat(4, 1fr);
-      width: 100%;
+      width: 90%;
       margin: 30px;
       padding: 50px;
 
@@ -48,7 +20,6 @@
   }
   .pokemon:hover{
     transform: translateY(-15px);
-
   }
 
   .card-img{
@@ -152,8 +123,30 @@
     background: var(--color-psychic);
   }
 
+}
 
+@media screen and (max-width: 640px ) and (min-width: 150px) {
+  .cardlist-pokemon {
+    display:grid;
+    grid-template-rows: repeat(1, 1fr);
+    width: 40%;
+    margin: 30px;
+    padding: 50px;
 
+}
+  .pokemon {
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+    background: #FCDDEC;
+  }
+  .card-img{
 
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 270px;
+    width: 270px;
+  }
 }
 

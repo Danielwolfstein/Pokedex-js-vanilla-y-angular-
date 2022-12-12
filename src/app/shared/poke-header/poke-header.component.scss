@@ -1,6 +1,7 @@
 @import '../../../config-scss/rem-calc.scss';
 :host
 {
+
   header{
     display: flex;
     align-items: center;
@@ -8,13 +9,12 @@
     padding: 40px 0;
   }
   .logo{
-    width: 150px;
+    width: 50%;
     text-decoration: none;
     font-family: inherit;
     color: #FFCB05;
     font-size: 84px;
     font-weight: bold;
-
     text-shadow: 4px 0 0 #080B3A, -4px 0 0 #080B3A, 0 4px 0 #080B3A, 0 -4px 0 #080B3A;
   }
   .btn-search{
@@ -22,16 +22,28 @@
     outline: none;
     border-radius: 25px;
     font-family: inherit;
-    padding: 15px 30px;
+    padding: 20px 30px;
     cursor: pointer;
     letter-spacing: 2px;
     background-color: var(--color-fighting);
     color: #ffff;
     font-size: 20px;
+    margin: 30px;
 }
 
 .btn-search:hover{
     background-color: var(--color-steel);
 }
+
+}
+
+@media screen and (max-width: 640px){
+  .container{
+    display: grid;
+    grid-template-rows: repeat;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 0;
+  }
 
 }

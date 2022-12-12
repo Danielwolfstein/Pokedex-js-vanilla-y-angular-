@@ -1,0 +1,120 @@
+<header class="container">
+  <a href="/" class="logo"> POKEDEX </a>
+  <button [routerLink]= "['']" class="btn-search">Volver</button>
+</header>
+<div class="info_entrenador">
+  <img src="../../../assets/logoenBlanco.png" alt=""
+
+
+  />
+  <ol class="info_basica">
+    <li>Nombre: Felipe Ramirez</li>
+    <li>Edad: 23 años</li>
+    <li>Género: masculino</li>
+    <li>Región: Bogotá-Colombia</li>
+    <li>Clase entrenador: Criador</li>
+  </ol>
+
+</div>
+<section class="cardlist-pokemon">
+  <ng-template [ngFor] let-pokemon [ngForOf]="getAllPokemons">
+    <a [routerLink]= "['details', 122]" class="pokemon" *ngIf="pokemon.status">
+      <div class="card-img" >
+        <img
+        src="https://projectpokemon.org/images/normal-sprite/mr.mime.gif"
+        alt="mr-mime"
+        />
+
+    </div>
+    <div class="card-info">
+        <span class="pokemon-id">122</span>
+        <h1>mr-mime</h1>
+        <div  class="card-types" id="card-types" style=>
+          <span class="psychic">psychic</span>
+          <span class="fairy">fairy</span>
+        </div>
+    </div>
+    </a>
+    <a [routerLink]= "['details', 128]" class="pokemon" *ngIf="pokemon.status">
+      <div class="card-img" >
+        <img
+        src="https://projectpokemon.org/images/normal-sprite/tauros.gif"
+        alt="tauros"
+        />
+
+    </div>
+    <div class="card-info">
+        <span class="pokemon-id">128</span>
+        <h1>tauros</h1>
+        <div  class="card-types" id="card-types" style=>
+          <span class="normal">normal</span>
+        </div>
+    </div>
+    </a>
+    <a [routerLink]= "['details', 24]" class="pokemon" *ngIf="pokemon.status">
+      <div class="card-img" >
+        <img
+        src="https://projectpokemon.org/images/normal-sprite/arbok.gif"
+        alt="arbok"
+        />
+
+    </div>
+    <div class="card-info">
+        <span class="pokemon-id">24</span>
+        <h1>arbok</h1>
+        <div  class="card-types" id="card-types" style=>
+          <span class="poison">poison</span>
+        </div>
+    </div>
+    </a>
+    <a [routerLink]= "['details', 136]" class="pokemon" *ngIf="pokemon.status">
+      <div class="card-img" >
+        <img
+        src="https://projectpokemon.org/images/normal-sprite/flareon.gif"
+        alt="flareon"
+        />
+
+    </div>
+    <div class="card-info">
+        <span class="pokemon-id">136</span>
+        <h1>flareon</h1>
+        <div  class="card-types" id="card-types" style=>
+          <span class="fire">fire</span>
+        </div>
+    </div>
+    </a>
+    <a [routerLink]= "['details', 106]" class="pokemon" *ngIf="pokemon.status">
+      <div class="card-img" >
+        <img
+        src="https://projectpokemon.org/images/normal-sprite/hitmonlee.gif"
+        alt="hitmonlee"
+        />
+
+    </div>
+    <div class="card-info">
+        <span class="pokemon-id">106</span>
+        <h1>hitmonlee</h1>
+        <div  class="card-types" id="card-types" style=>
+          <span class="fighting">fighting</span>
+        </div>
+    </div>
+    </a>
+    <a [routerLink]= "['details', 145]" class="pokemon" *ngIf="pokemon.status">
+      <div class="card-img" >
+        <img
+        src="https://projectpokemon.org/images/normal-sprite/zapdos.gif"
+        alt="zapdos"
+        />
+
+    </div>
+    <div class="card-info">
+        <span class="pokemon-id">145</span>
+        <h1>zapdos</h1>
+        <div  class="card-types" id="card-types" style=>
+          <span class="electric">electric</span>
+          <span class="flying">flying</span>
+        </div>
+    </div>
+    </a>
+  </ng-template>
+</section>
